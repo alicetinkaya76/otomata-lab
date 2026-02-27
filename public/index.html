@@ -3,12 +3,128 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="theme-color" content="#090b11" />
-  <title>Otomata Lab | Σ*</title>
+
+  <!-- ═══ SEO: Primary Meta ═══ -->
+  <title>Otomata Lab | Σ* — İnteraktif Otomata Teorisi Eğitim Platformu</title>
+  <meta name="description" content="Sipser tabanlı interaktif otomata teorisi platformu. DFA, NFA, PDA, Turing Makinesi inşa et, trace yap, Pumping Lemma oyunu oyna. 6 modül, 103 problem, 50 quiz. Türkçe & İngilizce." />
+  <meta name="keywords" content="otomata, automata, DFA, NFA, PDA, Turing machine, formal languages, biçimsel diller, Sipser, bilgisayar bilimi, computer science, eğitim, education, interactive, interaktif, pumping lemma, regular expression, context-free grammar" />
+  <meta name="author" content="Dr. Öğr. Üyesi Ali Çetinkaya — Selçuk Üniversitesi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://otomata-lab.vercel.app/" />
+
+  <!-- ═══ SEO: Open Graph (Facebook, LinkedIn, WhatsApp) ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Otomata Lab | Σ* — İnteraktif Otomata Teorisi" />
+  <meta property="og:description" content="DFA'dan Turing Makinelerine: interaktif otomata teorisi platformu. 6 modül, 103 problem, gerçek PDA stack & TM tape trace, Pumping Lemma oyunu." />
+  <meta property="og:url" content="https://otomata-lab.vercel.app/" />
+  <meta property="og:site_name" content="Otomata Lab" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image" content="https://otomata-lab.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- ═══ SEO: Twitter Card ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Otomata Lab | Σ* — İnteraktif Otomata Teorisi" />
+  <meta name="twitter:description" content="DFA, NFA, PDA, TM: interaktif öğrenme platformu. 103 problem, Pumping Lemma oyunu, canlı görselleştirme." />
+  <meta name="twitter:image" content="https://otomata-lab.vercel.app/og-image.png" />
+
+  <!-- ═══ SEO: Structured Data (JSON-LD) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Otomata Lab",
+    "alternateName": "Σ* Otomata Lab",
+    "url": "https://otomata-lab.vercel.app",
+    "description": "İnteraktif otomata teorisi eğitim platformu — Interactive automata theory learning platform",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Ali Çetinkaya",
+      "jobTitle": "Assistant Professor",
+      "url": "https://scholar.google.com/citations?user=uMskfSMAAAAJ",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Selçuk Üniversitesi — Bilgisayar Mühendisliği Bölümü"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/alicetinkaya76/",
+        "https://scholar.google.com/citations?user=uMskfSMAAAAJ",
+        "https://github.com/alicetinkaya76",
+        "https://orcid.org/0000-0002-7747-6854"
+      ]
+    },
+    "educationalLevel": "University",
+    "inLanguage": ["tr", "en"],
+    "isAccessibleForFree": true,
+    "keywords": "DFA, NFA, PDA, Turing Machine, automata theory, formal languages, Sipser, pumping lemma"
+  }
+  </script>
+
+  <!-- ═══ SEO: Educational Course Schema ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Biçimsel Diller ve Otomata Teorisi",
+    "alternateName": "Formal Languages and Automata Theory",
+    "description": "Sipser tabanlı 6 modüllü interaktif otomata teorisi kursu: Temeller, DFA, NFA, RE & Pumping Lemma, CFG & PDA, Turing Makinesi",
+    "provider": {
+      "@type": "Organization",
+      "name": "Selçuk Üniversitesi",
+      "url": "https://www.selcuk.edu.tr"
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": "Dr. Ali Çetinkaya"
+    },
+    "inLanguage": ["tr", "en"],
+    "isAccessibleForFree": true,
+    "numberOfCredits": 0,
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT20H"
+    }
+  }
+  </script>
+
+  <!-- ═══ Google Analytics (gtag.js) ═══ -->
+  <!-- Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- ═══ Favicon ═══ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Σ</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Σ</text></svg>" />
+
+  <!-- ═══ Preconnect ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+
   <style>*{margin:0;padding:0;box-sizing:border-box}body{background:#090b11;color:#c5cadb}</style>
 </head>
 <body>
-  <noscript>JavaScript gerekli.</noscript>
+  <noscript>
+    <h1>Otomata Lab | Σ*</h1>
+    <p>İnteraktif Otomata Teorisi Eğitim Platformu — JavaScript gereklidir.</p>
+    <p>Interactive Automata Theory Learning Platform — JavaScript required.</p>
+  </noscript>
   <div id="root"></div>
 </body>
 </html>

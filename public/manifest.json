@@ -1,0 +1,16 @@
+{
+  "short_name": "Otomata Lab",
+  "name": "Otomata Lab | Σ* — İnteraktif Otomata Teorisi",
+  "description": "DFA, NFA, PDA, Turing Makinesi: interaktif otomata teorisi eğitim platformu",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#090b11",
+  "background_color": "#090b11",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

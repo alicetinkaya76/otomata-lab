@@ -163,10 +163,40 @@ export default function OtomataLab() {
         {!aCh && tab==="minimize" && <DFAMinimize/>}
         {!aCh && tab==="realworld"&& <RealWorld/>}
 
-        {/* Footer */}
-        <div style={{marginTop:28,padding:"14px 0",textAlign:"center",fontSize:10,color:C.tm,borderTop:`1px solid ${C.bd}`}}>
-          Otomata Lab v4 — Sipser "Introduction to the Theory of Computation"
-          <br/>{t("footer")}
+        {/* ═══ FOOTER — Developer Info ═══ */}
+        <div style={{marginTop:28,padding:"24px 0 16px",textAlign:"center",borderTop:`1px solid ${C.bd}`}}>
+          {/* Developer badge */}
+          <div style={{fontSize:9,fontWeight:700,color:"#f59e0b",fontFamily:F.s,letterSpacing:".08em",marginBottom:6}}>
+            🏆 GELİŞTİRİCİ
+          </div>
+          <div style={{fontSize:15,fontWeight:800,color:C.wh,fontFamily:F.s,marginBottom:4}}>
+            Dr. Öğr. Üyesi Ali Çetinkaya
+          </div>
+          <div style={{fontSize:11,color:C.ts,fontFamily:F.s,marginBottom:12}}>
+            Selçuk Üniversitesi — Bilgisayar Mühendisliği Bölümü
+          </div>
+
+          {/* Social links */}
+          <div style={{display:"flex",gap:8,justifyContent:"center",flexWrap:"wrap",marginBottom:14}}>
+            {[
+              {label:"📧 Email",     href:"mailto:ali.cetinkaya@selcuk.edu.tr", color:"#60a5fa"},
+              {label:"💼 LinkedIn",   href:"https://www.linkedin.com/in/alicetinkaya76/", color:"#f97316"},
+              {label:"📈 Google Scholar", href:"https://scholar.google.com/citations?user=uMskfSMAAAAJ", color:"#34d399"},
+              {label:"⭐ GitHub",     href:"https://github.com/alicetinkaya76", color:"#fbbf24"},
+            ].map(({label,href,color})=>(
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                style={{padding:"6px 14px",borderRadius:7,border:`1.5px solid ${color}30`,background:`${color}08`,
+                  color,fontSize:11,fontWeight:700,fontFamily:F.s,textDecoration:"none",transition:"all .15s"}}
+                onMouseEnter={e=>{e.target.style.background=`${color}18`;e.target.style.borderColor=`${color}60`;}}
+                onMouseLeave={e=>{e.target.style.background=`${color}08`;e.target.style.borderColor=`${color}30`;}}
+              >{label}</a>
+            ))}
+          </div>
+
+          {/* Project info */}
+          <div style={{fontSize:10,color:C.tm,fontFamily:F.s,lineHeight:1.6}}>
+            Otomata Lab v6 — Sipser "Introduction to the Theory of Computation" · MIT Lisans · 2025
+          </div>
         </div>
       </div>
     </div>
